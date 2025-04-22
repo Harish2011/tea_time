@@ -13,6 +13,8 @@ function App() {
     }));
   };
 
+  console.log("cart", cart);
+
   const handleDecrement = (id) => {
     setCart((prev) => {
       const newCount = (prev[id] || 0) - 1;
@@ -33,8 +35,21 @@ function App() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Tea time</h1>
-
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <h1>Tea time</h1>{" "}
+        <button
+          onClick={() => setCart({})}
+          style={{
+            padding: "8px 16px",
+            backgroundColor: "#f44336",
+            color: "#fff",
+            border: "none",
+            borderRadius: 4,
+          }}
+        >
+          Reset Cart
+        </button>
+      </div>
       <div className="menu_list_container">
         {menuItems.map((item) => (
           <ItemCard
@@ -46,23 +61,9 @@ function App() {
           />
         ))}
       </div>
-
       <hr />
       <h2>Total Items: {totalCount}</h2>
       <h2>Total Price: ₹ {totalPrice}</h2>
-      <button
-        onClick={() => setCart({})}
-        style={{
-          marginTop: 20,
-          padding: "8px 16px",
-          backgroundColor: "#f44336",
-          color: "#fff",
-          border: "none",
-          borderRadius: 4,
-        }}
-      >
-        Reset Cart
-      </button>
     </div>
   );
 }

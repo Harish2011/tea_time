@@ -13,8 +13,8 @@ const menuItems = [
   },
   {
     id: 3,
-    name: "Ginger Tea",
-    price: 20,
+    name: "Ginger jeera jaggery Tea",
+    price: 35,
     image: "assets/ginger-jeera-tea.jpg",
   },
 ];

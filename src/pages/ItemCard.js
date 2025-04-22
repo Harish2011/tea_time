@@ -11,8 +11,8 @@ const ItemCard = ({ item, quantity, onIncrement, onDecrement }) => {
         alignItems: "center",
         justifyContent: "start",
         gap: "20px",
-        width: "230px",
         borderRadius: "10px",
+        maxWidth: "max-content",
       }}
     >
       <div>
