@@ -1,6 +1,6 @@
 import React from "react";
 
-const ItemCard = ({ item, quantity, onIncrement, onDecrement }) => {
+const ItemCard = ({ item, quantity, onIncrement, onDecrement, onDelete }) => {
   return (
     <div
       style={{
@@ -13,6 +13,7 @@ const ItemCard = ({ item, quantity, onIncrement, onDecrement }) => {
         gap: "20px",
         borderRadius: "10px",
         maxWidth: "max-content",
+        position: "relative",
       }}
     >
       <div>
@@ -34,6 +35,9 @@ const ItemCard = ({ item, quantity, onIncrement, onDecrement }) => {
           +
         </button>
       </div>
+      <button onClick={onDelete} className="delete_icons">
+        Delete
+      </button>
     </div>
   );
 };
