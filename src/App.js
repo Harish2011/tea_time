@@ -50,6 +50,19 @@ function App() {
       <hr />
       <h2>Total Items: {totalCount}</h2>
       <h2>Total Price: ₹ {totalPrice}</h2>
+      <button
+        onClick={() => setCart({})}
+        style={{
+          marginTop: 20,
+          padding: "8px 16px",
+          backgroundColor: "#f44336",
+          color: "#fff",
+          border: "none",
+          borderRadius: 4,
+        }}
+      >
+        Reset Cart
+      </button>
     </div>
   );
 }
